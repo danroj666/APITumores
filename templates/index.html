@@ -21,9 +21,9 @@
             
             <div class="diagnosis">
                 {% if has_tumor %}
-                <p class="alert danger">¡POSIBLE TUMOR DETECTADO! (Confianza: {{ confidence }})</p>
+                <p class="alert danger">¡Tumor Detectado! (Prediccion: {{ confidence }})</p>
                 {% else %}
-                <p class="alert success">No se detectaron tumores (Confianza: {{ confidence }})</p>
+                <p class="alert success">No se Encontro Tumor (Prediccion: {{ confidence }})</p>
                 {% endif %}
             </div>
             
@@ -34,12 +34,12 @@
                 </div>
                 
                 <div class="image-card">
-                    <h3>Contornos Detectados</h3>
+                    <h3>Imagen Analizada 1</h3>
                     <img src="{{ url_for('static', filename=result_images.contours) }}" alt="Contornos">
                 </div>
                 
                 <div class="image-card">
-                    <h3>Mapa de Calor</h3>
+                    <h3>Imagen Analizada 2</h3>
                     <img src="{{ url_for('static', filename=result_images.heatmap) }}" alt="Mapa de Calor">
                 </div>
             </div>
